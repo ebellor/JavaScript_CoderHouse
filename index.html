@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Document</title>
+
+<link crossorigin="anonymous" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"></head>
+<body style="background-image: url(./imagenes/bgpizza.jpg);">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.32/dist/sweetalert2.all.min.js"></script>
+
+
+<a href="intent://send/+56967381415#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end" 
+style="font-size:20px;padding:5px 12px;border-radius:5px;background-color:#189D0E;color:white;text-shadow:none;"> ›› Mensaje de WhatsApp </a>
+
+<form name="tipoTexto" action="#">
+<table style="text-align: left; background-color: rgb(253, 204, 127); width: 1213px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: right;"><img style="width: 117px; height: 155px;" alt="" src="./imagenes/monito.png"></td>
+<td style="font-family: Arial; color: black; text-align: center; width: 951px;">
+<h1><big><big>Pizzeria "El Monito Sabrosón"</big></big></h1>
+</td>
+<td style="width: 117px;"><img style="width: 117px; height: 155px;" alt="" src="./imagenes/monito.png"></td>
+</tr>
+</tbody>
+</table>
+<table style="text-align: left; width: 65%;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>
+<center>
+<h2 style="width: 1208px;"><img style="width: 20%;" alt="" src="imagenes/arma-tu-pizza-one-line-banner.png"></h2>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table style="text-align: left; font-family: Arial; color: rgb(255, 204, 102); width: 1219px; height: 534px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1" style="text-align: center;"><img style="width: 192px; height: 78px;" alt="" src="imagenes/ingredientes.png"><br></td>
+<td><img style="width: 178px; height: 72px;" alt="" src="imagenes/extra.png"></td>
+<td style="text-align: center; font-family: Arial; width: 243px;" colspan="2" rowspan="1">
+
+    <div id="pagar"><button id="pagar" type="button" class="btn btn-danger">Pagar Pedido...</button></div>
+
+    
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+Elige el tamaño de tu PIZZA SABROSONA</td>
+<td style="text-align: center; width: 252px;"></td>
+<td colspan="2" rowspan="1" style="color: rgb(255, 204, 102); font-family: Arial; width: 243px;"></td>
+
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+    <select class="form-select" id="size"></select>
+
+</td>
+<td style="text-align: center; width: 252px;"><select class="form-select" id="extra1"></select></td>
+<td style="text-align: right; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; font-family: Courier New,Courier,monospace; color: black;"><big>TICKET DE COMPRA N°</big></td>
+<td style="width: 161px; background-color: rgb(246, 246, 246); font-weight: bold; font-family: Courier New,Courier,monospace; color: black;" id="ticket"></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+¿Qué masa SABROSONA quieres para tu PIZZA?</td>
+<td style="text-align: center; width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;">------------------------</td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;">----------------</td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+    <select class="form-select" id="tipo"></select>
+</td>
+<td style="text-align: center; width: 252px;"><select class="form-select" id="extra2"></select></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item1"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor1"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">¿Quieres alguna salsa SABROSONA?</td>
+<td style="text-align: center; width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item2"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor2"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+<select class="form-select" id="salsa"></select>
+</td>
+<td style="text-align: center; width: 252px;"><select class="form-select" id="extra3"></select></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item3"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor3"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+¿Cuanta salsa SABROSONA quieres?</td>
+<td style="text-align: center; width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item4"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor4"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+<select class="form-select" id="cantidadSalsa"></select>
+</td>
+<td style="text-align: center; width: 252px;"><select class="form-select" id="extra4"></select></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item5"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor5"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+¿Quieres mozzarella SABROSON?</td>
+<td style="text-align: center; width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item6"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor6"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+<select class="form-select" id="queso"></select>
+</td>
+<td style="width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item7"><big></big></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valor7"><big></big></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+¿Algúna carne SABROSONA?
+</td>
+<td style="width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item8">
+    <br></td>
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valExt1"></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+<select class="form-select" id="carne"></select>
+</td>
+<td style="width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item9">
+    <br></td> 
+    
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valExt2"></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+¿Algo sano y SABROSON?
+</td>
+<td style="width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item10">
+    <br></td>
+    
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valExt3"></td>
+</tr>
+<tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;">
+<select class="form-select" id="vegetal"></select>
+</td>
+<td style="width: 252px;"></td>
+<td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="item11">
+   <br></td>
+
+<td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;" id="valExt4"></td>
+</tr>
+<tr><td style="width: 97px;"></td><td style="width: 423px;"></td><td style="width: 252px;"></td><td style="font-family: Courier New,Courier,monospace; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black;">------------------------</td><td style="width: 161px; font-family: Courier New,Courier,monospace; text-align: right; background-color: rgb(246, 246, 246); font-weight: bold; color: black;">----------------</td></tr><tr>
+<td style="width: 97px;"></td>
+<td style="text-align: center; color: rgb(255, 204, 102); font-family: Arial; width: 423px;"></td>
+<td style="width: 252px;"></td>
+<td style="text-align: right; width: 243px; background-color: rgb(246, 246, 246); font-weight: bold; color: black; font-family: Courier New,Courier,monospace;"><big><big><big>Total &nbsp;</big></big></big></td>
+<td style="width: 161px; background-color: rgb(246, 246, 246); font-weight: bold; font-size: 24px; font-family: Courier New,Courier,monospace; text-align: right; color: black;" id="suma"></td>
+</tr>
+</tbody>
+</table>
+</form>
+<br>
+<script src="./productos.js"></script>
+<script src="./maquetacion.js"></script>
+
+<script src="./functions.js"></script>
+</body></html>
